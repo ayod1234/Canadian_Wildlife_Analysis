@@ -117,7 +117,7 @@ def dbscan_folium(n_clusters, dbscan_labels, gdf_points):
     color_list.append("#808080") 
 
     map_center = [gdf_points['Latitude'].mean(), gdf_points['Longitude'].mean()]
-    map_ = folium.Map(location=map_center, zoom_start=18, tiles="OpenStreetMap")
+    map_ = folium.Map(location=map_center, zoom_start=8, tiles="OpenStreetMap")
 
     gdf_points["cluster_label_dbscan"] = dbscan_labels
 
